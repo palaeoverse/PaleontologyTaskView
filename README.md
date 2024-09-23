@@ -1,4 +1,4 @@
-## CRAN Task View: Phylogenetics
+## CRAN Task View: Paleontology
 
 **URL:** <https://CRAN.R-project.org/view=Paleontology>
 
