@@ -30,30 +30,32 @@ Packages within the task view fall within one or more of the following task cate
 
 ### Getting paleontological data into R
 
-- `r pkg("chronosphere")`
-- `r pkg("folio")`
-- `r pkg("neotoma2")`
-- `r pkg("paleobioDB")`
-- `r pkg("rgbif")`
-- `r pkg("rgplates")`
-- `r pkg("ridigbio")`
-- `r pkg("rmacrostrat")`
-- `r pkg("rpaleoclim")`
+- `r pkg("paleobioDB")` has functions to query, download, process, and visualize occurence and taxonomic data from the [Paleobiology Database](https://paleobiodb.org/#/).
+- `r pkg("rgbif")` can query and download biological and paleontological occurrence data from the [Global Biodiversity Information Facility](https://www.gbif.org) (GBIF).
+- `r pkg("ridigbio")` can query and download biological and paleontological specimen record data from [iDigBio](https://www.idigbio.org/).
+- `r pkg("neotoma2")` can query, download, and manipulate data from the [Neotoma Paleoecology Database](https://www.neotomadb.org/), which specializes in fossil data holdings at timescales covering the last several decades to the last several million years.
+- `r pkg("folio")` contains datasets for teaching quantitative approaches and modeling in archaeology and paleontology
+- `r pkg("chronosphere")` can download time-stamped versions of various paleontological, paleoenvironmental, and paleoecological [databases](https://chronosphere.info/data/), including BioDeepTime (Smith et al. 2023), Triton (Fenton et al. 2021), the [Paleobiology Database](https://paleobiodb.org/#/), and [Ancient Reef Traits Database](https://art.nat.fau.de/).
+
+#### Acquiring paleontology-adjacent data
+
+- `r pkg("rmacrostrat")` can fetch geological data from [Macrostrat](https://macrostrat.org/) relevant to the spatial and temporal distribution of sedimentary, igneous, and metamorphic rocks as well as data extracted from them.
+- `r pkg("rpaleoclim")` can fetch paleoclimate data from [PaleoClim](http://www.paleoclim.org/), high resolution paleoclimate surfaces covering the whole globe. This includes data on surface temperature, precipitation and the standard bioclimatic variables commonly used in ecological modelling, derived from the HadCM3 general circulation model and downscaled to a spatial resolution of up to 2.5 minutes.
 
 ### Cleaning and/or manipulating paleontological data
 
-- `r pkg("CoordinateCleaner")`
-- `r pkg("fossilbrush")`
-- `r pkg("palaeoverse")`
+- `r pkg("palaeoverse")` has functionality to support data preparation and exploration for palaeobiological analyses, improving code reproducibility and accessibility.
+- `r pkg("CoordinateCleaner")` can perform automated flagging of common spatial and temporal errors in biological and paleontological collection data.
+- `r pkg("fossilbrush")` can perform automated detection and resolution of taxonomic and stratigraphic errors in fossil occurrence datasets.
+- `r pkg("rgplates")` can query the [GPlates](https://www.gplates.org/) API to reconstruct past positions of geographic entities (e.g., plates, coastlines, and coordinates) based on user-selected rotation models.
 
 ### Visualizing paleontological data
 
-- `r pkg("deeptime")`
-- `r pkg("GEOmap")`
-- `r pkg("rphylopic")`
-- `r pkg("SDAR")`
-- `r pkg("StratigrapheR")`
-- `r pkg("tidypaleo")`
+- `r pkg("deeptime")` extends the functionality of 'ggplot2' to help facilitate the plotting of data over long time intervals. Several functions are available to add highly customizable timescales to a variety of types of visualizations.
+- `r pkg("GEOmap")` includes a set of routines for making map projections, topographic maps, perspective plots, and geological maps.
+- `r pkg("rphylopic")` can query and fetch silhouettes of biological and paleontological organisms from [PhyloPic](https://www.phylopic.org/).
+- `r pkg("StratigrapheR")` can be used to generate highly customizable lithologs for stratigraphic and sedimentological data from outcrop sections and borehole logs with R base graphics. `r pkg("SDAR")` can be used to make similar, albeit less customizable, graphic logs with grid graphics.
+- `r pkg("tidypaleo")` provides a set of functions with a common framework for age-depth model management, stratigraphic visualization, and common statistical transformations
 
 ## Paleoecology and morphological evolution
 
@@ -113,3 +115,6 @@ Packages within the task view fall within one or more of the following task cate
 - `r pkg("clam")`
 
 ## References
+
+- Fenton, I.S., Woodhouse, A., Aze, T., Lazarus, D., Renaudie, J., Dunhill, A.M., Young, J.R. and Saupe, E.E., 2021. Triton, a new species-level database of Cenozoic planktonic foraminiferal occurrences. Scientific Data, 8(1), 160. `r doi("10.1038/s41597-021-00942-7")`.
+- Smith, J., Rillo, M.C., Kocsis, Á.T., Dornelas, M., Fastovich, D., Huang, H.H.M., Jonkers, L., Kiessling, W., Li, Q., Liow, L.H. and Margulis‐Ohnuma, M., 2023. BioDeepTime: A database of biodiversity time series for modern and fossil assemblages. Global Ecology and Biogeography, 32(10), 1680-1689.
