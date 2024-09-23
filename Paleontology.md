@@ -1,7 +1,7 @@
 ---
 name: Paleontology
-topic: Paleontology packages in R
-maintainer: William Gearty
+topic: Paleontology
+maintainer: William Gearty, Lewis A. Jones, Erin Dillon, Pedro Godoy, Harriet Drage, Christopher Dean, Bruna Farina
 email: willgearty@gmail.com
 version: 2024-09-23
 source: https://github.com/cran-task-views/Paleontology/
@@ -30,34 +30,86 @@ Packages within the task view fall within one or more of the following task cate
 
 ### Getting paleontological data into R
 
-- chronosphere, folio, neotoma2, paleobioDB, rgbif, rgplates, ridigbio, rmacrostrat, rpaleoclim
+- `r pkg("chronosphere")`
+- `r pkg("folio")`
+- `r pkg("neotoma2")`
+- `r pkg("paleobioDB")`
+- `r pkg("rgbif")`
+- `r pkg("rgplates")`
+- `r pkg("ridigbio")`
+- `r pkg("rmacrostrat")`
+- `r pkg("rpaleoclim")`
 
 ### Cleaning and/or manipulating paleontological data
 
-- CoordinateCleaner, fossilbrush, palaeoverse
+- `r pkg("CoordinateCleaner")`
+- `r pkg("fossilbrush")`
+- `r pkg("palaeoverse")`
 
 ### Visualizing paleontological data
 
-- deeptime, GEOmap, rphylopic, SDAR, StratigrapheR, tidypaleo
+- `r pkg("deeptime")`
+- `r pkg("GEOmap")`
+- `r pkg("rphylopic")`
+- `r pkg("SDAR")`
+- `r pkg("StratigrapheR")`
+- `r pkg("tidypaleo")`
 
 ## Paleoecology and morphological evolution
 
-- analogue, ecospace, fossil, rioja (and Environmetrics CTV); morphospace
+- `r pkg("analogue")`
+- `r pkg("ecospace")`
+- `r pkg("fossil")`
+- `r github("HOPE-UIB-BIO/R-Fossilpol-package")`
+- `r pkg("rioja")`
+- `r pkg("morphospace")`
+
+(and Environmetrics CTV)
 
 ## Paleobiogeography and biodiversity
 
-- Compadre, divDyn, divvy, hespdiv, ppgm, sepkoski (and Spatial CTV)
+- `r github("josteist/Compadre")`
+- `r pkg("divDyn")`
+- `r pkg("divvy")`
+- `r github("Liudas-Dau/hespdiv")`
+- `r pkg("ppgm")`
+- `r pkg("sepkoski")`
+
+(and Spatial CTV)
 
 ## Phylogenetics
 
-- CladeDate, fbdR, FossilSim/FossilSimShiny, paleobuddy, paleotree, RRphylo, strap (and Phylogenetics CTV)
+- `r github("evolucionario/cladedate")`
+- `r github("rachelwarnock/fbdR")`
+- `r pkg("FossilSim")` (`r pkg("FossilSimShiny")`)
+- `r pkg("paleobuddy")`
+- `r pkg("paleotree")`
+- `r pkg("RRphylo")`
+- `r pkg("strap")`
+
+(and Phylogenetics CTV)
 
 ## Time series analysis
 
-- adePEM, astrocron, evoTS, paleoTS, RRatepol (and TimeSeries CTV)
+- `r github("klvoje/adePEM")`
+- `r pkg("astrocron")`
+- `r pkg("evoTS")`
+- `r pkg("paleoTS")`
+- `r github("HOPE-UIB-BIO/R-Ratepol-package")`
+- `r pkg("StratPal")`
+
+(and TimeSeries CTV)
 
 ## Paleoclimate and Earth system variables
 
-- Bchron, cRacle, DAIME, geoChronR, isogeochem, pastclim, sedproxy
+- `r pkg("Bchron")`
+- `r github("rsh249/cRacle")`
+- `r pkg("DAIME")`
+- `r github("nickmckay/GeoChronR")`
+- `r pkg("isogeochem")`
+- `r pkg("pastclim")`
+- `r pkg("sedproxy")`
+- `r pkg("admtools")`
+- `r pkg("clam")`
 
 ## References
