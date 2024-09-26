@@ -34,7 +34,8 @@ Packages within the task view fall within one or more of the following task cate
 - `r pkg("rgbif")` can query and download biological and paleontological occurrence data from the [Global Biodiversity Information Facility](https://www.gbif.org) (GBIF).
 - `r pkg("ridigbio")` can query and download biological and paleontological specimen record data from [iDigBio](https://www.idigbio.org/).
 - `r pkg("neotoma2")` can query, download, and manipulate data from the [Neotoma Paleoecology Database](https://www.neotomadb.org/), which specializes in fossil data holdings at timescales covering the last several decades to the last several million years.
-- `r pkg("folio")` contains datasets for teaching quantitative approaches and modeling in archaeology and paleontology
+- `r pkg("sepkoski")` contains data on the stratigraphic ranges of fossil marine animal genera from Sepkoski's (2002) published compendium.
+- `r pkg("folio")` contains datasets for teaching quantitative approaches and modeling in archaeology and paleontology.
 - `r pkg("chronosphere")` can download time-stamped versions of various paleontological, paleoenvironmental, and paleoecological [databases](https://chronosphere.info/data/), including BioDeepTime (Smith et al. 2023), Triton (Fenton et al. 2021), the [Paleobiology Database](https://paleobiodb.org/#/), and [Ancient Reef Traits Database](https://art.nat.fau.de/).
 
 #### Acquiring paleontology-adjacent data
@@ -55,41 +56,49 @@ Packages within the task view fall within one or more of the following task cate
 - `r pkg("GEOmap")` includes a set of routines for making map projections, topographic maps, perspective plots, and geological maps.
 - `r pkg("rphylopic")` can query and fetch silhouettes of biological and paleontological organisms from [PhyloPic](https://www.phylopic.org/).
 - `r pkg("StratigrapheR")` can be used to generate highly customizable lithologs for stratigraphic and sedimentological data from outcrop sections and borehole logs with R base graphics. `r pkg("SDAR")` can be used to make similar, albeit less customizable, graphic logs with grid graphics.
-- `r pkg("tidypaleo")` provides a set of functions with a common framework for age-depth model management, stratigraphic visualization, and common statistical transformations
+- `r pkg("tidypaleo")` provides a set of functions with a common framework for age-depth model management, stratigraphic visualization, and common statistical transformations.
 
 ## Paleoecology and morphological evolution
 
-- `r pkg("analogue")`
-- `r pkg("ecospace")`
-- `r pkg("fossil")`
-- `r github("HOPE-UIB-BIO/R-Fossilpol-package")`
-- `r pkg("rioja")`
-- `r pkg("morphospace")`
+### Paleoenvironmental reconstruction
+
+- `r pkg("rioja")` implements a number of numerical methods for inferring the value of an environmental variable from a set of sepecies abundances.
+- `r pkg("analogue")` has functions for the prediction of environmental data from species data by fitting Modern Analogue Technique and Weighted Averaging transfer function models.
 
 (and Environmetrics CTV)
 
+### Quantifying ecological and morphological evolution
+
+- `r pkg("ecospace")` implements Monte Carlo simulations of ecological diversification models, using a user-specified ecospace (trait space) framework.
+- `r pkg("fossil")` has functions for estimating shared species/beta diversity, species area curves, and geographic distances and areas.
+- `r github("HOPE-UIB-BIO/R-Fossilpol-package")` has functions for processing and standardizing global palaeoecological pollen data.
+- `r pkg("Morphoscape")` implements adaptive landscape methods (first described by Polly et al. 2016) for the integration, analysis and visualization of biological trait data on a phenotypic morphospace.
+- `r pkg("RRphylo")` can be used to estimate variation and shift in the rate of phenotypic evolution with fossil data using phylogenetic ridge regression.
+
+Also see the `r view("Phylogenetics")` task view for details about studying discrete and continuous morphological evolution in a phylogenetic context.
+
 ## Paleobiogeography and biodiversity
 
-- `r github("josteist/Compadre")`
-- `r pkg("divDyn")`
-- `r pkg("divvy")`
-- `r github("Liudas-Dau/hespdiv")`
-- `r pkg("ppgm")`
-- `r pkg("sepkoski")`
+- `r github("josteist/Compadre")` can be used to estimate rates of speciation/origination, extinction and sampling using Bayesian capture-mark-recapture techniques.
+- `r pkg("divDyn")` has functions to describe the sampling and diversity dynamics of fossil occurrence datasets.
+- `r pkg("divvy")` has functions to conduct spatial subsampling for biogeography and biodiversity studies and calculate common biodiversity and range-size metrics.
+- `r github("Liudas-Dau/hespdiv")` has functions to conduct hierarchical spatial sampling and perform analysis and visualization of these samples.
+- `r pkg("fossil")` has functions for estimating species richness (Chao 1 and 2, ACE, ICE, Jacknife) and shared species/beta diversity.
+- `r pkg("ppgm")` can be used to conduct the reconstruction of paleoclimate niches using phylogenetic comparative methods and projection reconstructed niches onto paleoclimate maps.
 
-(and Spatial CTV)
+Users may also find packages in the `r view("Spatial")` task view useful for analyzing paleobiogeography.
 
 ## Phylogenetics
 
-- `r github("evolucionario/cladedate")`
-- `r github("rachelwarnock/fbdR")`
-- `r pkg("FossilSim")` (`r pkg("FossilSimShiny")`)
-- `r pkg("paleobuddy")`
-- `r pkg("paleotree")`
-- `r pkg("RRphylo")`
-- `r pkg("strap")`
+- `r pkg("paleotree")` provides tools for transforming, a posteriori time-scaling, and modifying phylogenies containing extinct lineages.
+- `r pkg("FossilSim")` can be used to simulate fossil occurrence data on phylogenetic trees under mechanistic models of speciation, fossil preservation, and fossil recovery. Quick simulations can be conducted in a graphical user interface with `r pkg("FossilSimShiny")`.
+- `r pkg("paleobuddy")` can be used to simulate phylogenetic trees and fossil records with custom speciation, extinction, and fossil sampling rates.
+- `r github("rachelwarnock/fbdR")` has functions for estimating speciation and extinction rates from phylogenetic trees and fossil occurrence data.
+- `r github("evolucionario/cladedate")` has functions to use a MonteCarlo approach to generate empirical calibration information from the fossil record.
+- `r pkg("RRphylo")` can be used to estimate variation and shift in the rate of phenotypic evolution with fossil data using phylogenetic ridge regression.
+- `r pkg("strap")` has functions for the stratigraphic analysis of phylogenetic trees.
 
-(and Phylogenetics CTV)
+Also see the `r view("Phylogenetics")` task view for broader details about conducting various analyses in a phylogenetic context.
 
 ## Time series analysis
 
@@ -117,4 +126,6 @@ Packages within the task view fall within one or more of the following task cate
 ## References
 
 - Fenton, I.S., Woodhouse, A., Aze, T., Lazarus, D., Renaudie, J., Dunhill, A.M., Young, J.R. and Saupe, E.E., 2021. Triton, a new species-level database of Cenozoic planktonic foraminiferal occurrences. Scientific Data, 8(1), 160. `r doi("10.1038/s41597-021-00942-7")`.
-- Smith, J., Rillo, M.C., Kocsis, Á.T., Dornelas, M., Fastovich, D., Huang, H.H.M., Jonkers, L., Kiessling, W., Li, Q., Liow, L.H. and Margulis‐Ohnuma, M., 2023. BioDeepTime: A database of biodiversity time series for modern and fossil assemblages. Global Ecology and Biogeography, 32(10), 1680-1689.
+- Polly, P. D., Stayton, C. T., Dumont, E. R., Pierce, S. E., Rayfield, E. J., & Angielczyk, K. D. 2016. Combining geometric morphometrics and finite element analysis with evolutionary modeling: towards a synthesis. Journal of Vertebrate Paleontology, 36(4). `r doi("10.1080/02724634.2016.1111225")`
+- Sepkoski, J. J. 2002. A compendium of fossil marine animal genera. Bulletins of American Paleontology, 363, 1–560. <https://www.biodiversitylibrary.org/item/40634>
+- Smith, J., Rillo, M.C., Kocsis, Á.T., Dornelas, M., Fastovich, D., Huang, H.H.M., Jonkers, L., Kiessling, W., Li, Q., Liow, L.H. and Margulis-Ohnuma, M., 2023. BioDeepTime: A database of biodiversity time series for modern and fossil assemblages. Global Ecology and Biogeography, 32(10), 1680-1689. `r doi("10.1111/geb.13735")`
