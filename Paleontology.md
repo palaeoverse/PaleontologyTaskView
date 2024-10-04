@@ -24,7 +24,8 @@ Packages within the task view fall within one or more of the following task cate
 3.  **Paleobiogeography and biodiversity:** packages that are useful for performing paleobiogeographical and/or paleobiodiversity analyses
 4.  **Phylogenetics:** packages that are useful for performing phylogenetic analyses that include paleontological data
 5.  **Time series analysis:** packages that are useful for performing time series analyses of paleontological data
-6.  **Paleoclimate and Earth system variables:** packages that are useful for acquiring and analyzing paleoclimate and Earth system data
+6.  **Stratigraphy and sedimentology:** packages that are useful for acquiring and analyzing stratigraphic or sedimentological data
+6.  **Paleoclimate:** packages that are useful for acquiring and analyzing paleoclimate data
 
 ## Working with paleontological data in R
 
@@ -37,11 +38,6 @@ Packages within the task view fall within one or more of the following task cate
 - `r pkg("sepkoski")` contains data on the stratigraphic ranges of fossil marine animal genera from Sepkoski's (2002) published compendium.
 - `r pkg("folio")` contains datasets for teaching quantitative approaches and modeling in archaeology and paleontology.
 - `r pkg("chronosphere")` can download time-stamped versions of various paleontological, paleoenvironmental, and paleoecological [databases](https://chronosphere.info/data/), including BioDeepTime (Smith et al. 2023), Triton (Fenton et al. 2021), the [Paleobiology Database](https://paleobiodb.org/#/), and [Ancient Reef Traits Database](https://art.nat.fau.de/).
-
-#### Acquiring paleontology-adjacent data
-
-- `r pkg("rmacrostrat")` can fetch geological data from [Macrostrat](https://macrostrat.org/) relevant to the spatial and temporal distribution of sedimentary, igneous, and metamorphic rocks as well as data extracted from them.
-- `r pkg("rpaleoclim")` can fetch paleoclimate data from [PaleoClim](http://www.paleoclim.org/), high resolution paleoclimate surfaces covering the whole globe. This includes data on surface temperature, precipitation and the standard bioclimatic variables commonly used in ecological modelling, derived from the HadCM3 general circulation model and downscaled to a spatial resolution of up to 2.5 minutes.
 
 ### Cleaning and/or manipulating paleontological data
 
@@ -65,7 +61,7 @@ Packages within the task view fall within one or more of the following task cate
 - `r pkg("rioja")` implements a number of numerical methods for inferring the value of an environmental variable from a set of sepecies abundances.
 - `r pkg("analogue")` has functions for the prediction of environmental data from species data by fitting Modern Analogue Technique and Weighted Averaging transfer function models.
 
-(and Environmetrics CTV)
+Users may also find packages in the `r view("Environmetrics")` task view useful for analyzing ecological and environmental data.
 
 ### Quantifying ecological and morphological evolution
 
@@ -102,26 +98,43 @@ Also see the `r view("Phylogenetics")` task view for broader details about condu
 
 ## Time series analysis
 
-- `r github("klvoje/adePEM")`
-- `r pkg("astrocron")`
-- `r pkg("evoTS")`
-- `r pkg("paleoTS")`
-- `r github("HOPE-UIB-BIO/R-Ratepol-package")`
-- `r pkg("StratPal")`
+- `r pkg("paleoTS")` facilitates the analysis of paleontological temporal sequences of trait values by fitting evolutionary models using maximum likelihood.
+- `r pkg("evoTS")` facilitates univariate and multivariate analysis of evolutionary sequences of phenotypic change over time. The package extends the modeling framework available in `r pkg("paleoTS")`.
+- `r github("klvoje/adePEM")` has functions for assessing the adequacy of models of phenotypic change within lineages, like those fit by `r pkg("paleoTS")` and `r pkg("evoTS")`.
+- `r pkg("StratPal")` can be used to simulate biological processes in the time domain (e.g., trait evolution, fossil abundance), and examine how their expression in the rock record (stratigraphic domain) is influenced based on age-depth models, ecological niche models, and taphonomic effects.
+- `r pkg("astrocron")` can conduct routines for astrochronologic testing, astronomical time scale construction, and time series analysis. Also included are a range of statistical analysis and modeling routines that are relevant to time scale development and paleoclimate analysis.
+- `r github("HOPE-UIB-BIO/R-Ratepol-package")` has functions for estimating rate of change (RoC) from community data in time series.
 
-(and TimeSeries CTV)
+Also see the `r view("TimeSeries")` task view for broader details about conducting time series analyses.
 
-## Paleoclimate and Earth system variables
+## Stratigraphy and sedimentology
 
-- `r pkg("Bchron")`
-- `r github("rsh249/cRacle")`
-- `r pkg("DAIME")`
-- `r github("nickmckay/GeoChronR")`
-- `r pkg("isogeochem")`
-- `r pkg("pastclim")`
-- `r pkg("sedproxy")`
-- `r pkg("admtools")`
-- `r pkg("clam")`
+### Acquiring stratigraphic and sedimentological data
+
+- `r pkg("rmacrostrat")` can fetch geological data from [Macrostrat](https://macrostrat.org/) relevant to the spatial and temporal distribution of sedimentary, igneous, and metamorphic rocks as well as data extracted from them.
+
+### Analyzing stratigraphic and sedimentological data
+
+- `r pkg("admtools")` can be used to estimate age-depth models from stratigraphic and sedimentological data.
+- `r pkg("Bchron")` has functions for quick calibration of radiocarbon dates under various calibration curves.
+- `r pkg("clam")` can be used to perform 'classical' age-depth modelling of dated sediment deposits.
+- `r github("nickmckay/GeoChronR")` has functions to generate state-of-the-art age models, create time-uncertain ensembles, analyze those ensembles with a number of commonly-used techniques, and visualize the results in an intuitive way.
+- `r pkg("isogeochem")` can be used to quickly calculate isotope fractionation factors and apply paleothermometry equations.
+- `r pkg("DAIME")` can be used to model the effects of changing deposition rates on geological data and rates.
+
+
+## Paleoclimate
+
+### Acquiring and manipulating paleoclimate reconstruction data
+
+- `r pkg("rpaleoclim")` can fetch paleoclimate data from [PaleoClim](http://www.paleoclim.org/), high resolution paleoclimate surfaces covering the whole globe. This includes data on surface temperature, precipitation and the standard bioclimatic variables commonly used in ecological modelling, derived from the HadCM3 general circulation model and downscaled to a spatial resolution of up to 2.5 minutes.
+- `r pkg("pastclim")` has methods to easily access, manipulate, and use paleoclimate reconstructions.
+
+### Reconstructing and modelling paleoclimate
+
+- `r github("mchevalier2/crestr")` can be used to create probabilistic reconstructions of past climate change from fossil assemblage data.
+- `r github("rsh249/cRacle")` can be used to perform the Climate Reconstruction Analysis using Coexistence Likelihood Estimation (CRACLE) method to estimate climate and paleoclimate from vegetation using large repositories of biodiversity data.
+- `r pkg("sedproxy")` can be used to conduct forward modelling of sediment archived climate proxy records based on hypothesized "true" past climate (e.g., climate model output), sedimentation, and sampling.
 
 ## References
 
