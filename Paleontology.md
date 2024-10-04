@@ -3,62 +3,60 @@ name: Paleontology
 topic: Paleontology
 maintainer: William Gearty, Lewis A. Jones, Erin Dillon, Pedro Godoy, Harriet Drage, Christopher Dean, Bruna Farina
 email: willgearty@gmail.com
-version: 2024-09-23
+version: 2024-10-04
 source: https://github.com/cran-task-views/Paleontology/
 ---
 
 ## Overview
 
-Computational paleontology (or paleobiology) is a thriving field. Gone are the days of just digging up fossils; paleontologists now have the luxury of being able to perform a wide array of complex computational analyses on local and global compendia of fossil occurrence, phylogenetic, and morphological data to study the functional and phylogenetic evolution of organisms, ecosystem function and ecological interactions, paleobiogeographic patterns, and more. Until recently, computational paleontologists have mostly relied on resources designed for evolutionary biologists, ecologists, GISers, and data scientists to accomplish such analyses. However, slowly but surely, resources (including explicit R packages) are being developed to cater to these paleontological tasks.
+Computational paleontology is a thriving field. Gone are the days of just digging up fossils; paleontologists now have the luxury of being able to perform a wide array of complex computational analyses on local and global compendia of fossil data to study the evolution of organisms and the environments they live in. Until recently, computational paleontologists have mostly relied on resources designed for evolutionary biologists, ecologists, GISers, and data scientists to accomplish such analyses. However, slowly but surely, R resources are being developed to cater to these paleontological tasks.
 
 Therefore, we have assembled this task view to bring together all R packages that are specifically geared towards acquiring, cleaning, visualizing, and/or analyzing various kinds of paleontological and paleontology-adjacent data. We use this venue to showcase the wide variety of R packages available across the paleosciences and to provide a brief contextual overview of each package for a broad audience of R users.
 
-If you have any questions, feel free to reach out to the task view maintainers or the maintainers of specific packages. Questions may also be directed to the [paleonet](https://paleonet.org/) mailing-list after subscription.
+If you have any questions, feel free to reach out to the task view maintainers or the maintainers of specific packages. Questions may also be directed to the [palaeoverse google group](https://groups.google.com/g/palaeoverse) or the [paleonet](https://paleonet.org/) mailing list.
 
 ## Scope
 
-Packages within the task view fall within one or more of the following task categories:
+Packages within the task view fall within one or more of the following broad categories:
 
-1.  **Working with paleontological data in R:** packages dedicated to the acquisition, cleaning, manipulation, and/or visualization of paleontological data
-2.  **Paleoecology and morphological evolution:** packages that are useful for performing paleoecological and morphological analyses
-3.  **Paleobiogeography and biodiversity:** packages that are useful for performing paleobiogeographical and/or paleobiodiversity analyses
-4.  **Phylogenetics:** packages that are useful for performing phylogenetic analyses that include paleontological data
-5.  **Time series analysis:** packages that are useful for performing time series analyses of paleontological data
-6.  **Stratigraphy and sedimentology:** packages that are useful for acquiring and analyzing stratigraphic or sedimentological data
-6.  **Paleoclimate:** packages that are useful for acquiring and analyzing paleoclimate data
+1.  **[Wrangling paleontological data](#wrangling-paleontological-data):** packages dedicated to the acquisition, cleaning, manipulation, and/or visualization of paleontological data
+2.  **[Paleoecology and morphological evolution](#paleoecology-and-morphological-evolution):** packages that are useful for performing paleoecological and morphological analyses
+3.  **[Paleobiogeography and biodiversity](#paleobiogeography-and-biodiversity):** packages that are useful for performing paleobiogeographical and/or paleobiodiversity analyses
+4.  **[Phylogenetics](#phylogenetics):** packages that are useful for performing phylogenetic analyses that include paleontological data
+5.  **[Time series analysis](#time-series-analysis):** packages that are useful for performing time series analyses of paleontological data
+6.  **[Stratigraphy and sedimentology](#stratigraphy-and-sedimentology):** packages that are useful for acquiring and analyzing stratigraphic or sedimentological data
+7.  **[Paleoclimate](#paleoclimate):** packages that are useful for acquiring and analyzing paleoclimate data
 
-## Working with paleontological data in R
+## Wrangling paleontological data
 
-### Getting paleontological data into R
+### Acquiring paleontological data
 
-- `r pkg("paleobioDB")` has functions to query, download, process, and visualize occurence and taxonomic data from the [Paleobiology Database](https://paleobiodb.org/#/).
+- `r pkg("paleobioDB")` has functions to query, download, process, and visualize occurence and taxonomic data from the [Paleobiology Database](https://paleobiodb.org/#/) (PBDB).
 - `r pkg("rgbif")` can query and download biological and paleontological occurrence data from the [Global Biodiversity Information Facility](https://www.gbif.org) (GBIF).
 - `r pkg("ridigbio")` can query and download biological and paleontological specimen record data from [iDigBio](https://www.idigbio.org/).
 - `r pkg("neotoma2")` can query, download, and manipulate data from the [Neotoma Paleoecology Database](https://www.neotomadb.org/), which specializes in fossil data holdings at timescales covering the last several decades to the last several million years.
 - `r pkg("sepkoski")` contains data on the stratigraphic ranges of fossil marine animal genera from Sepkoski's (2002) published compendium.
 - `r pkg("folio")` contains datasets for teaching quantitative approaches and modeling in archaeology and paleontology.
-- `r pkg("chronosphere")` can download time-stamped versions of various paleontological, paleoenvironmental, and paleoecological [databases](https://chronosphere.info/data/), including BioDeepTime (Smith et al. 2023), Triton (Fenton et al. 2021), the [Paleobiology Database](https://paleobiodb.org/#/), and [Ancient Reef Traits Database](https://art.nat.fau.de/).
+- `r pkg("chronosphere")` can download time-stamped versions of various paleontological, paleoenvironmental, and paleoecological [databases](https://chronosphere.info/data/), including BioDeepTime (Smith et al. 2023), Triton (Fenton et al. 2021), the [Paleobiology Database](https://paleobiodb.org/#/), and the [Ancient Reef Traits Database](https://art.nat.fau.de/).
 
 ### Cleaning and/or manipulating paleontological data
 
-- `r pkg("palaeoverse")` has functionality to support data preparation and exploration for palaeobiological analyses, improving code reproducibility and accessibility.
+- `r pkg("palaeoverse")` has functionality to support data preparation and exploration for paleobiological analyses with a focus on improving code flow, reproducibility, and accessibility.
 - `r pkg("CoordinateCleaner")` can perform automated flagging of common spatial and temporal errors in biological and paleontological collection data.
 - `r pkg("fossilbrush")` can perform automated detection and resolution of taxonomic and stratigraphic errors in fossil occurrence datasets.
-- `r pkg("rgplates")` can query the [GPlates](https://www.gplates.org/) API to reconstruct past positions of geographic entities (e.g., plates, coastlines, and coordinates) based on user-selected rotation models.
+- `r pkg("rgplates")` can query the [GPlates](https://www.gplates.org/) desktop application and [web service API](https://gws.gplates.org/) to reconstruct past positions of geographic entities (e.g., plates, coastlines, and coordinates) based on user-selected rotation models. The `palaeorotate` function in `r pkg("palaeoverse")` can be used to query the GPlates API for fossil occurrences across multiple time intervals.
 
 ### Visualizing paleontological data
 
-- `r pkg("deeptime")` extends the functionality of 'ggplot2' to help facilitate the plotting of data over long time intervals. Several functions are available to add highly customizable timescales to a variety of types of visualizations.
+- `r pkg("deeptime")` extends the functionality of the [`ggplot2`](https://ggplot2.tidyverse.org/) package to help facilitate the plotting of data over long time intervals. Several functions are available to add highly customizable timescales to a variety of types of visualizations.
 - `r pkg("GEOmap")` includes a set of routines for making map projections, topographic maps, perspective plots, and geological maps.
-- `r pkg("rphylopic")` can query and fetch silhouettes of biological and paleontological organisms from [PhyloPic](https://www.phylopic.org/).
-- `r pkg("StratigrapheR")` can be used to generate highly customizable lithologs for stratigraphic and sedimentological data from outcrop sections and borehole logs with R base graphics. `r pkg("SDAR")` can be used to make similar, albeit less customizable, graphic logs with grid graphics.
-- `r pkg("tidypaleo")` provides a set of functions with a common framework for age-depth model management, stratigraphic visualization, and common statistical transformations.
+- `r pkg("rphylopic")` can query and fetch silhouettes of biological and paleontological organisms from the [PhyloPic](https://www.phylopic.org/) database.
 
 ## Paleoecology and morphological evolution
 
 ### Paleoenvironmental reconstruction
 
-- `r pkg("rioja")` implements a number of numerical methods for inferring the value of an environmental variable from a set of sepecies abundances.
+- `r pkg("rioja")` implements a number of numerical methods for inferring the value of an environmental variable from a set of species abundances.
 - `r pkg("analogue")` has functions for the prediction of environmental data from species data by fitting Modern Analogue Technique and Weighted Averaging transfer function models.
 
 Users may also find packages in the `r view("Environmetrics")` task view useful for analyzing ecological and environmental data.
@@ -70,17 +68,18 @@ Users may also find packages in the `r view("Environmetrics")` task view useful 
 - `r github("HOPE-UIB-BIO/R-Fossilpol-package")` has functions for processing and standardizing global palaeoecological pollen data.
 - `r pkg("Morphoscape")` implements adaptive landscape methods (first described by Polly et al. 2016) for the integration, analysis and visualization of biological trait data on a phenotypic morphospace.
 - `r pkg("RRphylo")` can be used to estimate variation and shift in the rate of phenotypic evolution with fossil data using phylogenetic ridge regression.
+- `r pkg("paleoTS")`, `r pkg("evoTS")`, and `r github("klvoje/adePEM")` have functions for fitting evolutionary models to morphological time series (see [Time series analysis](#time-series-analysis) for more information).
 
 Also see the `r view("Phylogenetics")` task view for details about studying discrete and continuous morphological evolution in a phylogenetic context.
 
 ## Paleobiogeography and biodiversity
 
-- `r github("josteist/Compadre")` can be used to estimate rates of speciation/origination, extinction and sampling using Bayesian capture-mark-recapture techniques.
+- `r github("josteist/Compadre")` can be used to estimate rates of speciation/origination, extinction, and sampling using Bayesian capture-mark-recapture techniques.
 - `r pkg("divDyn")` has functions to describe the sampling and diversity dynamics of fossil occurrence datasets.
+- `r pkg("fossil")` has functions for estimating species richness (Chao 1 and 2, ACE, ICE, Jacknife) and shared species/beta diversity.
 - `r pkg("divvy")` has functions to conduct spatial subsampling for biogeography and biodiversity studies and calculate common biodiversity and range-size metrics.
 - `r github("Liudas-Dau/hespdiv")` has functions to conduct hierarchical spatial sampling and perform analysis and visualization of these samples.
-- `r pkg("fossil")` has functions for estimating species richness (Chao 1 and 2, ACE, ICE, Jacknife) and shared species/beta diversity.
-- `r pkg("ppgm")` can be used to conduct the reconstruction of paleoclimate niches using phylogenetic comparative methods and projection reconstructed niches onto paleoclimate maps.
+- `r pkg("ppgm")` can be used to conduct paleophylogeographic modeling of climate niches and species distributions.
 
 Users may also find packages in the `r view("Spatial")` task view useful for analyzing paleobiogeography.
 
@@ -122,6 +121,10 @@ Also see the `r view("TimeSeries")` task view for broader details about conducti
 - `r pkg("isogeochem")` can be used to quickly calculate isotope fractionation factors and apply paleothermometry equations.
 - `r pkg("DAIME")` can be used to model the effects of changing deposition rates on geological data and rates.
 
+### Visualizing stratigraphic and sedimentological data
+
+- `r pkg("StratigrapheR")` can be used to generate highly customizable lithologs for stratigraphic and sedimentological data from outcrop sections and borehole logs with R base graphics. `r pkg("SDAR")` can be used to make similar, albeit less customizable, graphic logs with grid graphics.
+- `r pkg("tidypaleo")` provides a set of functions with a common framework for age-depth model management, stratigraphic visualization, and common statistical transformations.
 
 ## Paleoclimate
 
