@@ -49,6 +49,7 @@ Packages within the task view fall within one or more of the following broad cat
 ### Visualizing paleontological data
 
 - `r pkg("deeptime")` extends the functionality of the [`ggplot2`](https://ggplot2.tidyverse.org/) package to help facilitate the plotting of data over long time intervals. Several functions are available to add highly customizable timescales to a variety of types of visualizations.
+- `r pkg("palaeoverse")` has functions for visualizing occurrence data through time and across space in base R. The `axis_geo` function can be used to add a timescale to a base R plot.
 - `r pkg("GEOmap")` includes a set of routines for making map projections, topographic maps, perspective plots, and geological maps.
 - `r pkg("rphylopic")` can query and fetch silhouettes of biological and paleontological organisms from the [PhyloPic](https://www.phylopic.org/) database.
 
