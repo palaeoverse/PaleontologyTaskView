@@ -127,6 +127,7 @@ Also see the `r view("TimeSeries")` task view for broader details about conducti
 
 - `r pkg("StratigrapheR")` can be used to generate highly customizable lithologs for stratigraphic and sedimentological data from outcrop sections and borehole logs with R base graphics. `r pkg("SDAR")` can be used to make similar, albeit less customizable, graphic logs with grid graphics.
 - `r pkg("tidypaleo")` provides a set of functions with a common framework for age-depth model management, stratigraphic visualization, and common statistical transformations.
+- `r pkg("provenance")` provides a set of functions for the visual interpretation of large datasets in sedimentary geology, including adaptive kernel density estimation, principal component analysis, correspondence analysis, multidimensional scaling, generalised procrustes analysis and individual differences scaling
 
 ## Paleoclimate
 
