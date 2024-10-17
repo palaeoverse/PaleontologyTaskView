@@ -9,9 +9,9 @@ source: https://github.com/cran-task-views/Paleontology/
 
 ## Overview
 
-Computational Paleontology is an emerging field. Paleontologists are increasingly turning to a wide array of complex computational analyses to address various research questions and test hypotheses. Until recently, paleontologists have mostly leveraged resources designed for evolutionary biologists, ecologists, geographers, and data scientists to accomplish such analyses. However, slowly but surely, R resources are being developed to cater for paleontological tasks and datasets.
+Computational Paleontology is an emerging field. Paleontologists are increasingly turning to a wide array of complex computational analyses to address various research questions and test hypotheses. Until recently, paleontologists have mostly leveraged resources designed for evolutionary biologists, ecologists, geographers, and data scientists to accomplish such analyses. However, R resources are now being developed that cater to paleontological tasks and datasets.
 
-We have assembled this task view to bring together R packages that are specifically geared towards acquiring, cleaning, visualizing, and/or analyzing various kinds of paleontological and paleontology-adjacent data. We use this venue to showcase the wide variety of R packages available across the paleosciences and to provide a brief contextual overview of each package for a broad audience of R users.
+We have assembled this task view to bring together R packages that are specifically geared towards acquiring, cleaning, visualizing, and/or analyzing various kinds of paleontological and paleontology-adjacent data. We use this venue to showcase the wide variety of R packages available across the paleosciences and to provide a brief overview of each package for a broad audience of R users.
 
 If you have any questions, feel free to reach out to the task view maintainers or the maintainers of specific packages. Questions may also be directed to the [palaeoverse google group](https://groups.google.com/g/palaeoverse) or the [paleonet](https://paleonet.org/) mailing list.
 
@@ -36,7 +36,7 @@ Packages within the task view fall within one or more of the following broad cat
 - `r pkg("rgbif")` can query and download biological and paleontological occurrence data from the [Global Biodiversity Information Facility](https://www.gbif.org) (GBIF).
 - `r pkg("ridigbio")` can query and download biological and paleontological specimen record data from [iDigBio](https://www.idigbio.org/).
 - `r pkg("sepkoski")` contains data on the stratigraphic ranges of fossil marine animal genera from Sepkoski's (2002) published compendium.
-- `r pkg("folio")` contains datasets for teaching quantitative approaches and modeling in archeology and paleontology.
+- `r pkg("folio")` contains datasets for teaching quantitative approaches and modeling in archaeology and paleontology.
 - `r pkg("chronosphere")` can download time-stamped versions of various paleontological, paleoenvironmental, and paleoecological [databases](https://chronosphere.info/data/), including BioDeepTime (Smith et al. 2023), Triton (Fenton et al. 2021), the [Paleobiology Database](https://paleobiodb.org/#/), and the [Ancient Reef Traits Database](https://art.nat.fau.de/).
 
 ### Cleaning and/or manipulating paleontological data
@@ -103,7 +103,7 @@ Also see the `r view("Phylogenetics")` task view for broader details about condu
 - `r github("klvoje/adePEM")` has functions for assessing the adequacy of models of phenotypic change within lineages, like those fit by `r pkg("paleoTS")` and `r pkg("evoTS")`.
 - `r pkg("StratPal")` can be used to simulate biological processes in the time domain (e.g., trait evolution, fossil abundance), and examine how their expression in the rock record (stratigraphic domain) is influenced based on age-depth models, ecological niche models, and taphonomic effects.
 - `r pkg("astrocron")` can conduct routines for astrochronologic testing, astronomical time scale construction, and time series analysis. Also included are a range of statistical analysis and modeling routines that are relevant to time scale development and paleoclimate analysis.
-- `r github("HOPE-UIB-BIO/R-Ratepol-package")` has functions for estimating rate of change (RoC) from community data in time series.
+- `r github("HOPE-UIB-BIO/R-Ratepol-package")` has functions for estimating rate of change (RoC) from time series of community data.
 
 Also see the `r view("TimeSeries")` task view for broader details about conducting time series analyses.
 
@@ -116,10 +116,10 @@ Also see the `r view("TimeSeries")` task view for broader details about conducti
 ### Analyzing stratigraphic and sedimentological data
 
 - `r pkg("admtools")` can be used to estimate age-depth models from stratigraphic and sedimentological data.
-- `r pkg("Bchron")` has functions for quick calibration of radiocarbon dates under various calibration curves.
 - `r pkg("clam")` can be used to perform 'classical' age-depth modelling of dated sediment deposits.
-- `r github("nickmckay/GeoChronR")` has functions to generate state-of-the-art age models, create time-uncertain ensembles, analyze those ensembles with a number of commonly-used techniques, and visualize the results in an intuitive way.
 - `r pkg("rbacon")` can be used to perform age-depth modelling using Bayesian statistics to reconstruct accumulation histories for deposits, through combining radiocarbon and other dates with prior information on accumulation rates and their variability.
+- `r pkg("Bchron")` has functions for quick calibration of radiocarbon dates under various calibration curves and can be used to perform Bayesian age-depth modelling.
+- `r github("nickmckay/GeoChronR")` has functions to model, analyze, and visualize age-uncertain data and offers access to commonly-used age-modelling tools such as `r pkg("rbacon")` and `r pkg("BChron")`.
 - `r pkg("isogeochem")` can be used to quickly calculate isotope fractionation factors and apply paleothermometry equations.
 - `r pkg("DAIME")` can be used to model the effects of changing deposition rates on geological data and rates.
 
