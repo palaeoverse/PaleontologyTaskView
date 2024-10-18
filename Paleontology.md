@@ -102,7 +102,7 @@ Also see the `r view("Phylogenetics")` task view for broader details about condu
 - `r pkg("evoTS")` facilitates univariate and multivariate analysis of evolutionary sequences of phenotypic change over time. The package extends the modeling framework available in `r pkg("paleoTS")`.
 - `r github("klvoje/adePEM")` has functions for assessing the adequacy of models of phenotypic change within lineages, like those fit by `r pkg("paleoTS")` and `r pkg("evoTS")`.
 - `r pkg("StratPal")` can be used to simulate biological processes in the time domain (e.g., trait evolution, fossil abundance), and examine how their expression in the rock record (stratigraphic domain) is influenced based on age-depth models, ecological niche models, and taphonomic effects.
-- `r pkg("astrocron")` can conduct routines for astrochronologic testing, astronomical time scale construction, and time series analysis. Also included are a range of statistical analysis and modeling routines that are relevant to time scale development and paleoclimate analysis.
+- `r pkg("astrochron")` can conduct routines for astrochronologic testing, astronomical time scale construction, and time series analysis. Also included are a range of statistical analysis and modeling routines that are relevant to time scale development and paleoclimate analysis.
 - `r github("HOPE-UIB-BIO/R-Ratepol-package")` has functions for estimating rate of change (RoC) from time series of community data.
 
 Also see the `r view("TimeSeries")` task view for broader details about conducting time series analyses.
