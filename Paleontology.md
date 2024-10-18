@@ -81,6 +81,7 @@ Also see the `r view("Phylogenetics")` task view for details about studying disc
 - `r pkg("divvy")` has functions to conduct spatial subsampling for biogeography and biodiversity studies and calculate common biodiversity and range-size metrics.
 - `r github("Liudas-Dau/hespdiv")` has functions to conduct hierarchical spatial sampling and perform analysis and visualization of these samples.
 - `r pkg("ppgm")` can be used to conduct paleophylogeographic modeling of climate niches and species distributions.
+- `r pkg("CoordinateCleaner")` can be used to generate inputs for [PyRate](https://github.com/dsilvestro/PyRate), a program in Python that can estimate speciation and extinction rates from incomplete fossil data (Silvestro et al. 2014).
 
 Users may also find packages in the `r view("Spatial")` task view useful for analyzing paleobiogeography.
 
@@ -145,6 +146,7 @@ Also see the `r view("TimeSeries")` task view for broader details about conducti
 ## References
 
 - Fenton, I.S., Woodhouse, A., Aze, T., Lazarus, D., Renaudie, J., Dunhill, A.M., Young, J.R. and Saupe, E.E., 2021. Triton, a new species-level database of Cenozoic planktonic foraminiferal occurrences. Scientific Data, 8(1), 160. `r doi("10.1038/s41597-021-00942-7")`.
-- Polly, P. D., Stayton, C. T., Dumont, E. R., Pierce, S. E., Rayfield, E. J., & Angielczyk, K. D. 2016. Combining geometric morphometrics and finite element analysis with evolutionary modeling: towards a synthesis. Journal of Vertebrate Paleontology, 36(4). `r doi("10.1080/02724634.2016.1111225")`
+- Polly, P. D., Stayton, C. T., Dumont, E. R., Pierce, S. E., Rayfield, E. J., & Angielczyk, K. D. 2016. Combining geometric morphometrics and finite element analysis with evolutionary modeling: towards a synthesis. Journal of Vertebrate Paleontology, 36(4). `r doi("10.1080/02724634.2016.1111225")`.
 - Sepkoski, J. J. 2002. A compendium of fossil marine animal genera. Bulletins of American Paleontology, 363, 1–560. <https://www.biodiversitylibrary.org/item/40634>
-- Smith, J., Rillo, M.C., Kocsis, Á.T., Dornelas, M., Fastovich, D., Huang, H.H.M., Jonkers, L., Kiessling, W., Li, Q., Liow, L.H. and Margulis-Ohnuma, M., 2023. BioDeepTime: A database of biodiversity time series for modern and fossil assemblages. Global Ecology and Biogeography, 32(10), 1680-1689. `r doi("10.1111/geb.13735")`
+- Silvestro, D., Salamin, N. and Schnitzler, J., 2014. PyRate: a new program to estimate speciation and extinction rates from incomplete fossil data. Methods in Ecology and Evolution, 5(10), pp.1126-1131. `r doi("10.1111/2041-210X.12263")`.
+- Smith, J., Rillo, M.C., Kocsis, Á.T., Dornelas, M., Fastovich, D., Huang, H.H.M., Jonkers, L., Kiessling, W., Li, Q., Liow, L.H. and Margulis-Ohnuma, M., 2023. BioDeepTime: A database of biodiversity time series for modern and fossil assemblages. Global Ecology and Biogeography, 32(10), 1680-1689. `r doi("10.1111/geb.13735")`.
